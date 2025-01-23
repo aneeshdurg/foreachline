@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "foreachline"
+version = "0.0.1"
+authors = [
+  { name="Aneesh Durg", email="aneeshdurg17@gmail.com" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [ ]
+dependencies = []
+
+
+[project.scripts]
+foreachline = "foreachline:cli"
+
+[project.urls]
+"Homepage" = "https://github.com/aneeshdurg/foreachline"
+"Bug Tracker" = "https://github.com/aneeshdurg/foreachline/issues"
+
+
+[tool.pyright]
+exclude = ["**/__pycache__"]
+pythonVersion = "3.10"
+pythonPlatform = "Linux"
+
+[tool.isort]
+profile = "black"
+
+[tool.hatch.build.targets.wheel]
+packages = ["foreachline/"]
