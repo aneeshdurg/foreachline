@@ -18,3 +18,16 @@ def run(code: str):
             print(function(l))
         except EOFError:
             break
+
+@cli.command
+@click.argument('code')
+def filter(code: str):
+    function = f"lambda l: {code}"
+    function = eval(function)
+    while True:
+        try:
+            l = input()
+            if function(l):
+                print(l)
+        except EOFError:
+            break
