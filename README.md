@@ -44,3 +44,12 @@ iiiiiiiii
 jjjjjjjjjj
 ...
 ```
+
+
+## Installation
+
+```bash
+git clone https://github.com/aneeshdurg/foreachline.git
+cd foreachline
+pip install .
+```
